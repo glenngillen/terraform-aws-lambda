@@ -9,9 +9,9 @@ It also provides flexibility for most common configuration requirements.
 ```hcl
 module "aws-lambda" {
   source            = "glenngillen/aws-lambda/module"
-  version           = "1.0.1"
+  version           = "1.0.4"
   name              = "my_function"
-  filename          = "path/to/my/lambda.zip
+  filename          = "path/to/my/lambda.zip"
   handler           = "ruby2.7"
   runtime           = "index.handler"
   source_code_hash  = "hash-to-track-if-function-should-be-updated"
