@@ -8,7 +8,7 @@ It also provides flexibility for most common configuration requirements.
 
 ```hcl
 module "aws-lambda" {
-  source            = "glenngillen/aws-lambda/module"
+  source            = "glenngillen/lambda/module"
   version           = "1.0.4"
   name              = "my_function"
   filename          = "path/to/my/lambda.zip"
