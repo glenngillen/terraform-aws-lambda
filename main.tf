@@ -92,7 +92,7 @@ resource "aws_lambda_function" "this" {
     mode = "Active"
   }
   dynamic "environment" {
-    for_each = var.variables == null ? [] : []
+    for_each = var.variables == null || var.variables == {} ? [] : [0]
     content {
       variables = var.variables
     }
