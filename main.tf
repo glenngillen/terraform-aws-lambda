@@ -97,7 +97,4 @@ resource "aws_lambda_function" "this" {
       variables = environment.value
     }
   }
-  environment {
-    variables = var.variables
-  }
 }
