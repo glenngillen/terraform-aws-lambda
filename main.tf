@@ -94,7 +94,7 @@ resource "aws_lambda_function" "this" {
   dynamic "environment" {
     for_each = var.variables != null ? [var.variables] : []
     content {
-      variables = environment
+      variables = environment.value
     }
   }
   environment {
