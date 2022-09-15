@@ -91,6 +91,12 @@ resource "aws_lambda_function" "this" {
   tracing_config {
     mode = "Active"
   }
+  dynamic "environment" {
+    for_each = var.variables != null ? [var.variables] : []
+    content {
+      variables = environment
+    }
+  }
   environment {
     variables = var.variables
   }

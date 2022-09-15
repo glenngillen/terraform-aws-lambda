@@ -8,8 +8,8 @@ It also provides flexibility for most common configuration requirements.
 
 ```hcl
 module "aws-lambda" {
-  source            = "glenngillen/lambda/module"
-  version           = "1.0.4"
+  source            = "glenngillen/lambda/aws"
+  version           = "1.0.5"
   name              = "my_function"
   filename          = "path/to/my/lambda.zip"
   handler           = "ruby2.7"
