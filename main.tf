@@ -76,6 +76,12 @@ resource "aws_iam_role_policy_attachment" "xray" {
   policy_arn = aws_iam_policy.xray.arn
 }
 resource "aws_lambda_function" "this" {
+  lifecycle {
+    ignore_changes = [
+      filename,
+    ]
+  }
+
   tags = var.tags  
   filename      = var.filename
   function_name = var.name
